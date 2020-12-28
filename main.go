@@ -34,6 +34,10 @@ func main() {
 		Commands: []cli.Command{
 			{
 				Name: "start",
+				Description: `This program provides SSL termination to another server.
+This is a very simple way to achieve HTTPS on your local machine without changing any services.
+If '--cert' and '--key' files are not found when starting, this program will generate self-signed certificates and use them.
+If a client reaching this server verifies the certificate, you will need to ensure the generated certificate is in your trust store.`,
 				Flags: []cli.Flag{
 					cli.IntFlag{
 						Name:        "port",
