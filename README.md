@@ -16,3 +16,8 @@ This will serve HTTPS traffic @ `https://localhost:8443` proxying to `http://loc
 If `--cert` and `--key` files are not found when starting, this program will generate self-signed certificates and use them.
 
 NOTE: If a client reaching this server verifies the certificate, you will need to ensure the generated certificate is in your trust store.
+
+## SSL Certificates
+
+This program will generate self-signed certificates; however, it's best to use [`mkcert`](https://github.com/FiloSottile/mkcert#installation) instead.
+This tool manages a root CA on your computer and allows you to generate local-friendly certificates (`host.docker.internal`, `localhost`, etc.).
